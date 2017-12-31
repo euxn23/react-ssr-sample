@@ -1,0 +1,30 @@
+{
+  "name": "ssr-for-non-serverside-engineer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:01": "babel react-ssr/views/sample01.jsx -o react-ssr/views/sample01.js",
+    "build:02": "babel react-ssr/views/sample02.jsx -o react-ssr/views/sample02.js",
+    "build:03": "babel react-ssr/views/sample03.jsx -o react-ssr/views/sample03.js",
+    "build:04": "parcel build react-ssr/views/entry04.jsx -d react-ssr/views/dist --no-minify && babel react-ssr/views/sample04.jsx -o react-ssr/views/sample04.js",
+    "build:05": "parcel build react-ssr/views/entry05.jsx -d react-ssr/views/dist --no-minify && babel react-ssr/views/sample05.jsx -o react-ssr/views/sample05.js",
+    "build:06": "parcel build react-ssr/views/entry06.jsx -d react-ssr/views/dist --no-minify && babel react-ssr/views/sample06.jsx -o react-ssr/views/sample06.js",
+    "build:twitter": "parcel build react-ssr/views/entry-twitter.jsx -d react-ssr/views/dist --no-minify && babel react-ssr/views/sample-twitter.jsx -o react-ssr/views/sample-twitter.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "twit": "^2.2.9"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.3.1"
+  }
+}

@@ -26,7 +26,7 @@ const htmlify = (rootComponent, defaultProps) => (
 )
 
 app.get('/', async (req, res) => {
-  const response = await fetch('http://localhost:3000/tweets')
+  const response = await fetch('https://euxn-ssr-twitter.herokuapp.com/tweets')
   const tweets = await response.json()
   const prerenderedContent = renderToString(React.createElement(MyComponent, { tweets }))
   res.send(htmlify(prerenderedContent, { tweets }))
